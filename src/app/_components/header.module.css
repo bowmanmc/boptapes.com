@@ -1,0 +1,14 @@
+
+.header {
+    align-items: center;
+    /* aspect-ratio: 16/9; */
+    background-color: orange;
+    background-image: url('/header/daniel-schludi-mbGxz7pt0jM-unsplash.jpg');
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 66%;
+    justify-content: center;
+    padding: 1em;
+}

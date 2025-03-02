@@ -1,5 +1,6 @@
-import { Fugaz_One } from "next/font/google";
-import "./globals.css";
+import { Fugaz_One } from 'next/font/google';
+import './theme.css';
+import './globals.css';
 
 const fugazOne = Fugaz_One({
     variable: '--font-fugaz-one',

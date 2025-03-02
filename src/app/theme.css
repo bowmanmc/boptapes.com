@@ -1,0 +1,17 @@
+:root {
+    --color-light: #f9f1d8;
+    --color-dark: #260026;
+    --color-yellow: #ffc200;
+    --color-orange: #ff8020;
+    --color-red: #de0055;
+
+    --color-gray-dark: #333;
+    --color-gray-medium: #777;
+    --color-gray-light: #ccc;
+    --color-gray-xtralight: #eee;
+
+
+    --font-size-small: 0.8em;
+    --font-size-normal: 1em;
+    --font-size-large: 1.5em;
+}

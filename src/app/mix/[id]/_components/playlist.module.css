@@ -1,0 +1,8 @@
+
+.playlistLink {
+    /* background: var(--color-light); */
+    border-radius: 12px;
+    font-size: var(--font-size-small);
+    margin-top: 1em;
+    padding: 1em;
+}

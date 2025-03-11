@@ -10,7 +10,7 @@ export default function Footer() {
             </div>
             <div className={styles.footer__content}>
                 <div className={styles.footer__section}>
-                    <img className={styles.footer__logo} src="/boptapes-light.png" alt="Bop Tapes" />
+                    <img className={styles.footer__logo} src="/logos/boptapes-light.png" alt="Bop Tapes" />
                     <h1>Bop Tapes</h1>
                 </div>
                 <div className={styles.footer__section}>

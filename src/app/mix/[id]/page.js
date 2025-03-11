@@ -15,11 +15,20 @@ export default function Mix() {
                 </div>
                 <p>
                     Did you know that the B-52s were John Lennon's favorite band?
-                    It's true! Formed in 1976 in Athens, Georgia, the B-52s are a
-                    New Wave band that has been making music for over 40 years.
                 </p>
                 <p>
-                    Their music is fun, catchy, and most of all, danceable.
+                    They formed as "the B-52's" in 1976 when Cindy Wilson, Ricky Wilson (her elder brother), Pierson, 
+                    Strickland, and cowbell player, poet, and lead vocalist Schneider held an impromptu jam session 
+                    after sharing a flaming volcano drink at a Chinese restaurant in Athens, Georgia. When they first 
+                    jammed, Strickland played guitar and Ricky Wilson played congas. They later played their first 
+                    concert (with Wilson on guitar) in 1977 at a Valentine's Day party for their friends.
+                </p>
+                <p>
+                    The name "B-52's" comes from a particular beehive hairdo resembling the nose cone of the aircraft, 
+                    which Pierson and Cindy Wilson wore in performances during the band's first decade. Other names 
+                    the band considered were the Tina-Trons and Fellini's Children. Strickland suggested the name 
+                    after a dream he had of a band performing in a hotel lounge. In the dream, he heard someone whisper 
+                    in his ear that the band's name was "the B-52's".
                 </p>
             </main>
             <div className={styles.sidebar}>

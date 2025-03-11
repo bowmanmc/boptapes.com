@@ -1,3 +1,4 @@
+import Footer from './_components/footer';
 import { Fugaz_One } from 'next/font/google';
 import './theme.css';
 import './globals.css';
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={`${fugazOne.variable}`}>
                 {children}
+                <Footer />
             </body>
         </html>
     );

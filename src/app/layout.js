@@ -1,3 +1,5 @@
+import { getSession } from "next-auth/react";
+import Providers from "./providers";
 import Footer from './_components/footer';
 import { Fugaz_One } from 'next/font/google';
 import './theme.css';
@@ -14,11 +16,15 @@ export const metadata = {
     description: "Create and share mix tapes with your friends.",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+    const session = await getSession();
+
     return (
         <html lang="en">
             <body className={`${fugazOne.variable}`}>
-                {children}
+                <Providers session={session}>
+                    {children}
+                </Providers>
                 <Footer />
             </body>
         </html>

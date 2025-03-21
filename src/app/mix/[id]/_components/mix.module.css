@@ -1,0 +1,10 @@
+
+.dedication {
+    background: var(--color-gray-xtralight);
+    border-radius: 12px;
+    font-size: var(--font-size-small);
+    font-style: italic;
+    color: var(--color-gray-dark);
+    margin: 1em 0;
+    padding: 2em 1em;
+}

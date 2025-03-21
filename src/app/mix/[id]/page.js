@@ -1,39 +1,37 @@
+"use client";
+
+import { useParams } from 'next/navigation';
+import { useMix } from '@/app/_lib/mix';
+import Mix from './_components/mix';
 import Playlist from './_components/playlist';
+import Spinner from './_components/spinner';
 import styles from './page.module.css';
 
-export default function Mix() {
+export default function MixPage() {
+    const { id } = useParams();
+    const { data, error } = useMix(id);
 
-    const playlistUrl = "https://open.spotify.com/playlist/3Xmv0MfKpt5R3yZsLJztTL?si=ef008f8677554b73";
-    // const playlistUrl = "https://music.apple.com/us/playlist/taste-of-the-b-52s/pl.u-EdAVz8bFY5BA0";
+    // Default to Spinner
+    let mainContent = <Spinner />;
+
+    // Error Messaging
+    if (error) {
+        mainContent = (
+            <p>An error occurred while loading mix {id}</p>
+        );
+    }
+
+    // Show the Mix if we have it!
+    let sidebarContent = null;
+    if (data) {
+        mainContent = <Mix mix={data.mix} />;
+        sidebarContent = <Playlist url={data.mix.playlist} />;
+    }
 
     return (
         <div className={styles.mixpage}>
-            <main className={styles.main}>
-                <h1>Top Five Songs by The B-52's</h1>
-                <div className={styles.dedication}>
-                    <p>Dedicated to Rock Lobsters and Crabs and Crustaceans around the world.</p>
-                </div>
-                <p>
-                    Did you know that the B-52s were John Lennon's favorite band?
-                </p>
-                <p>
-                    They formed as "the B-52's" in 1976 when Cindy Wilson, Ricky Wilson (her elder brother), Pierson, 
-                    Strickland, and cowbell player, poet, and lead vocalist Schneider held an impromptu jam session 
-                    after sharing a flaming volcano drink at a Chinese restaurant in Athens, Georgia. When they first 
-                    jammed, Strickland played guitar and Ricky Wilson played congas. They later played their first 
-                    concert (with Wilson on guitar) in 1977 at a Valentine's Day party for their friends.
-                </p>
-                <p>
-                    The name "B-52's" comes from a particular beehive hairdo resembling the nose cone of the aircraft, 
-                    which Pierson and Cindy Wilson wore in performances during the band's first decade. Other names 
-                    the band considered were the Tina-Trons and Fellini's Children. Strickland suggested the name 
-                    after a dream he had of a band performing in a hotel lounge. In the dream, he heard someone whisper 
-                    in his ear that the band's name was "the B-52's".
-                </p>
-            </main>
-            <div className={styles.sidebar}>
-                <Playlist url={playlistUrl} />
-            </div>
+            <main className={styles.main}>{mainContent}</main>
+            <div className={styles.sidebar}>{sidebarContent}</div>
         </div>
     );
 }

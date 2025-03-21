@@ -35,6 +35,7 @@
 
 .footer__logo {
     height: 96px;
+    width: auto;
 }
 
 .footer__copyright {

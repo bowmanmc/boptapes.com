@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './footer.module.css';
 
 export default function Footer() {
@@ -10,7 +11,11 @@ export default function Footer() {
             </div>
             <div className={styles.footer__content}>
                 <div className={styles.footer__section}>
-                    <img className={styles.footer__logo} src="/logos/boptapes-light.png" alt="Bop Tapes" />
+                    <Image className={styles.footer__logo} 
+                        src="/logos/boptapes-light.png" 
+                        alt="Bop Tapes" 
+                        width={512}
+                        height={345} />
                     <h1>Bop Tapes</h1>
                 </div>
                 <div className={styles.footer__section}>

@@ -1,4 +1,3 @@
-import { getSession } from "next-auth/react";
 import Providers from "./providers";
 import Footer from './_components/footer';
 import { Fugaz_One } from 'next/font/google';
@@ -17,12 +16,10 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-    const session = await getSession();
-
     return (
         <html lang="en">
             <body className={`${fugazOne.variable}`}>
-                <Providers session={session}>
+                <Providers>
                     {children}
                 </Providers>
                 <Footer />

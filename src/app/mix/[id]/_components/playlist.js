@@ -6,6 +6,10 @@ import styles from './playlist.module.css';
 
 export default function Playlist({ url }) {
 
+    if (!url) {
+        return null;
+    }
+
     let playlistPreview = null;
     const playlistType = getPlaylistType(url);
 
